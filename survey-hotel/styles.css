@@ -36,32 +36,17 @@ fieldset {
 }
 label {
     display:block;
+    background-color: pink;
 }
 input {
     width: 100%;
-    margin: 0.2em 0 0.2em 0;
+    background-color: yellow;
 }
 
 .info{
     font-size: 0.8rem;
 }
 .radio-label {
+    margin: 0.2em 0 0.2em 0;
     text-align: center;
-}
-
-@media screen and (min-width: 650px) {
-    .radio-wrapper {
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping of radio inputs */
-        align-items: center; /* Center vertically within the flex container */
-    }
-
-    .radio-btn {
-        margin-right: 10px; /* Add spacing between radio buttons */
-    }
-    
-    /* Optionally, you can control the width of the labels if needed */
-    .radio-label {
-        flex-basis: calc(33.33% - 10px); /* Adjust label width based on the number of items per row */
-    }
 }
