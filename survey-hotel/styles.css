@@ -5,6 +5,14 @@
     padding: 0;
 }
 
+body {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
 header {
     margin: 0 2em 0 2em;
 }
@@ -15,7 +23,7 @@ h1{
 }
 
 .description {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: justify;
     margin: 0.5em;
 }
@@ -29,24 +37,81 @@ fieldset {
     margin-top: 2em;
     margin-bottom: 0.8em;
     text-align: center;
+    font-weight: 600;
 }
 .question {
-    text-align: justify;
+    text-align: center;
 
 }
-label {
-    display:block;
-    background-color: pink;
-}
-input {
+
+/* Inputs - texts, email, number, select options */
+
+
+input, textarea {
     width: 100%;
-    background-color: yellow;
+    padding: 0 0.5em 0 0.5em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: none;
+    
 }
-
+input:focus {
+    background-color: orange;
+    border: 2.5px solid blue;
+}
 .info{
     font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+select {
+    outline:none;
+    color: grey;
+    width: 100%;
+}
+
+select:focus {
+    background-color: orange;
+    border-color: blue;
+    
+}
+
+/* Radios and their labels */
+
+label {
+    /* display:block; */
+    font-size: 0.7rem;
 }
 .radio-label {
     margin: 0.2em 0 0.2em 0;
     text-align: center;
+    background-color: yellow;
+}
+
+select {
+    padding: 0 0.5em 0 0.5em;
+}
+
+select option{
+    background-color: pink;
+    color: red;
+}
+::placeholder {
+    color:grey;
+}
+
+.group {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+    padding-top: 1em;
+}
+.subgroup {
+    display: flex;
+    flex-direction: column;
+    min-height: 20%;
+    min-width: 30%;
 }
