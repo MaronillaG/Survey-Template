@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Guest Satisfaction Survey</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&family=Roboto:wght@100;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title"> Hotel Guest Satisfaction Survey </h1>
+      <p class="description"> We value your opinion and strive to provide the best possible experience during your stay.<br>Please take a few minutes to tell us about your recent visit. Your feedback will help us enhance our services for future guests.</p>
+    </header>
+  
+    <form id="survey-form">
+      <fieldset>
+        <label class='info' for="name" id="name-label">Name</label>
+        <input id="name" type="text" required placeholder="Enter your name " autofocus autocomplete="name">
+        <label class='info' for="email" id="email-label">Email</label>
+        <input id="email" type="email" required placeholder="Enter your email address" autocomplete="email">
+        <label class='info' id="room" for="room-number">Room Number </label>
+        <input type="text" id="room-number" placeholder="Enter your room number" required>
+        <label class='info' for="age" id="number-label">Age (Optional) </label>
+        <input type="number" id="age" min="16" max="123" placeholder="Enter your age">
+        <label class='info' for="dropdown">How do you identify yourself?</label>
+        <select id="dropdown">
+          <option value="0" disabled selected>(select one)</option>
+          <option value="1">Man</option>
+          <option value="2">Woman</option>
+          <option value="3">Non-Binary</option>
+          <option value="4">Prefer to self-describe below</option>
+          <option value="5">Prefer not to disclose</option>
+          <div id='selfDescribeInput' style="display: none;">
+            <label for="selfDescribe">Please describe:</label>
+              <input type="textarea" name="identification"id="selfDescribe">
+          </div>
+            
+        </fieldset>
+
+        <fieldset> 
+        <legend class="section">1. Arrival and Check-in:</legend>
+        <legend class="question">How satisfied were you with the check-in process?</legend>
+        <div class="radio-wrapper">
+
+            <input class="radio-btn" type="radio" name="check_in_rating" value="very_satisfied" id="very_satisfied">
+            <label class="radio-label" for="very_satisfied">Very Satisfied</label>
+            <input class="radio-btn" type="radio" name="check_in_rating" value="satisfied" id="satisfied">
+            <label class="radio-label" for="satisfied">Satisfied</label>
+            <input class="radio-btn" type="radio" name="check_in_rating" value="neutral" id="neutral">          
+            <label class="radio-label" for="neutral">Neutral</label>
+            <input class="radio-btn" type="radio" name="check_in_rating" value="dissatisfied" id="dissatisfied"> 
+            <label class="radio-label" for="dissatisfied">Dissatisfied</label>
+            <input class="radio-btn" type="radio" name="check_in_rating" value="very_dissatisfied" id="very_dissatisfied">
+            <label class="radio-label" for="very_dissatisfied">Very Dissatisfied</label>
+
+      </fieldset>
+
+      <fieldset> 
+        <legend>Were you greeted warmly upon arrival?</legend>
+        <input type="radio" name="greeted" value="yes">
+        <label>Yes</label>
+        <input type="radio" name="greeted" value="no">
+        <label>No</label>
+      </fieldset>
+
+      <fieldset> 
+        <legend class="question">2. Room Accomodations:</legend>
+        <legend>How would you rate the cleanliness of your room?</legend>
+        <label><input type="radio" name="cleanliness_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="cleanliness_rating" value="good">Good</label>
+        <label><input type="radio" name="cleanliness_rating" value="fair">Fair</label>
+        <label><input type="radio" name="cleanliness_rating" value="poor">Poor</label>
+      </fieldset>
+      
+      <fieldset> 
+        <legend class="question">Did you find your room comfortable?</legend>
+        <label><input type="radio" name="comfort_rating" value="yes">Yes</label>
+        <label><input type="radio" name="comfort_rating" value="no">No</label>
+      </fieldset>
+      
+      <fieldset>
+        <legend class="question">3. Hotel Facilities:</legend>
+        <legend>Swimming Pool:</legend>
+        <label><input type="radio" name="swimming_pool_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="swimming_pool_rating" value="good">Good</label> 
+        <label><input type="radio" name="swimming_pool_rating" value="fair">Fair</label>
+        <label><input type="radio" name="swimming_pool_rating" value="poor">Poor</label>
+      </fieldset>
+      <fieldset>
+        <legend>Fitness Center: </legend>
+        <label><input type="radio" name="fitness_center_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="fitness_center_rating" value="good">Good</label> 
+        <label><input type="radio" name="fitness_center_rating" value="fair">Fair</label>
+        <label><input type="radio" name="fitness_center_rating" value="poor">Poor</label>
+      </fieldset>
+      <fieldset>
+        <legend>Restaurant:</legend>
+        <label><input type="radio" name="restaurant_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="restaurant_rating"  value="good">Good</label> 
+        <label><input type="radio" name="restaurant_rating"  value="fair">Fair</label>
+        <label><input type="radio" name="restaurant_rating" value="poor">Poor</label>
+      </fieldset>
+      <fieldset>
+        <legend>Spa:</legend>
+        <label><input type="radio" name="spa_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="spa_rating" value="good">Good</label> 
+        <label><input type="radio" name="spa_rating" value="fair">Fair</label>
+        <label><input type="radio" name="spa_rating" value="poor">Poor</label>
+      </fieldset>
+      
+      <fieldset> 
+        <legend>How would you rate the cleanliness of your room?</legend>
+        <label><input type="radio" name="cleanliness_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="cleanliness_rating" value="good">Good</label> 
+        <label><input type="radio" name="cleanliness_rating" value="fair">Fair</label>
+        <label><input type="radio" name="cleanliness_rating" value="poor">Poor</label>
+      </fieldset>
+      
+      <fieldset> 
+        <legend class="question">4. Dining Experience:</legend>
+        <legend>Did you dine at our restaurant during your stay?</legend>
+        <label><input type="radio" name="dined_in" value="yes">Yes</label>
+        <label><input type="radio" name="dined_in" value="no">No</label>
+        <legend>Please rate your dining experience:</legend>
+        <label><input type="radio" name="dining_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="dining_rating" value="good">Good</label> 
+        <label><input type="radio" name="dining_rating" value="fair">Fair</label>
+        <label><input type="radio" name="dining_rating" value="poor">Poor</label>
+
+      </fieldset>
+      <legend class="question">5. Overall Experience:</legend>
+      <fieldset> 
+        <legend>How would you rate your overall experience at [Hotel Name]?</legend>
+        <label><input type="radio" name="overall_rating" value="excellent">Excellent</label>
+        <label><input type="radio" name="overall_rating" value="good">Good</label> 
+        <label><input type="radio" name="overall_rating" value="fair">Fair</label>
+        <label><input type="radio" name="overall_rating" value="poor">Poor</label>
+      </fieldset>
+      <fieldset>
+        <legend class="question">6. Additional Comments:</legend>
+        <legend>Please share any comments or suggestions you have regarding your stay. Your feedback is greatly appreciated.</legend>
+        <textarea name="feedback" id="feedback" placeholder="Enter feedback here" rows="4" cols="30"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>May we contact you via email for any follow up communications?</legend>
+        <label>
+          <input type="checkbox" name="contact_via_email" value="yes">
+        </label>
+        <label class="submit" for="submit">
+          <input type="submit" value="Submit your responses" id="submit" name="submit">
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</hmtl>
