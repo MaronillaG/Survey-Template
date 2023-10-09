@@ -21,190 +21,267 @@
   
     <form id="survey-form">
       <fieldset>
-        <label class='info' for="name" id="name-label">Name</label>
-        <input id="name" type="text" required placeholder="Enter your name " autofocus autocomplete="name">
-        <label class='info' for="email" id="email-label">Email</label>
-        <input id="email" type="email" required placeholder="Enter your email address" autocomplete="email">
-        <label class='info' id="room" for="room-number">Room Number </label>
-        <input type="text" id="room-number" placeholder="Enter your room number" required>
-        <label class='info' for="age" id="number-label">Age (Optional) </label>
-        <input type="number" id="age" min="16" max="123" placeholder="Enter your age">
-        <label class='info' for="dropdown">How do you identify yourself?</label>
-        <select id="dropdown">
-          <option value="0" disabled selected>(select one)</option>
-          <option value="1">Man</option>
-          <option value="2">Woman</option>
-          <option value="3">Non-Binary</option>
-          <option value="4">Prefer to self-describe below</option>
-          <option value="5">Prefer not to disclose</option>
-          <div id='selfDescribeInput' style="display: none;">
-            <label for="selfDescribe">Please describe:</label>
-              <input type="textarea" name="identification"id="selfDescribe">
+        <div class="inital-section">
+          <div class="row1">
+            <label class='info' for="name" id="name-label">Name</label>
+            <input class='initial_inputs' id="name" type="text" required placeholder="Enter your name " autofocus autocomplete="name">
+            <label class='info' for="email" id="email-label">Email</label>
+            <input class='initial_inputs'id="email" type="email" required placeholder="Enter your email address" autocomplete="email">
           </div>
-            
-        </fieldset>
+          <div class="row2">
+            <label class='info' id="room" for="room-number">Room No. </label>
+            <input class='initial_inputs'type="text" id="room-number" placeholder="" required>
+            <label class='info' for="age" id="number-label">Age (Optional) </label>
+            <input class='initial_inputs'type="number" id="age" min="16" max="123" placeholder="">
+            <label class='info' for="dropdown">Identify as?</label>
+            <select id="dropdown" class='initial_inputs'>
+              <option value="0" disabled selected>(select one)</option>
+              <option value="1">Man</option>
+              <option value="2">Woman</option>
+              <option value="3">Non-Binary</option>
+              <option value="5">Prefer not to disclose</option>
+              <option value="4">Prefer to self-describe below</option>
+            </select>
+            <div id='selfDescribeInput' style="display: none;" class='initial_inputs'>
+              <label for="selfDescribe">Please describe:</label>
+                <input   type="textarea" name="identification"id="selfDescribe">
+            </div>
+          </div>
+
+
+        </div>
+      </fieldset>
 
         <fieldset> 
         <legend class="section">1. Arrival and Check-in:</legend>
         <legend class="question">How satisfied were you with the check-in process?</legend>
-          <div class="group">
-            <div class="subgroup">
+          <div class="big-group">
+            <div class="big-subgroup">
               <input class="radio-btn" type="radio" name="check_in_rating" value="very_satisfied" id="very_satisfied">
-              <label class="radio-label" for="very_satisfied">Very Satisfied</label></div>
-            <div class="subgroup">
+              <label class="radio-label" for="very_satisfied">Very Satisfied</label>
+            </div>
+            <div class="big-subgroup">
               <input class="radio-btn" type="radio" name="check_in_rating" value="satisfied" id="satisfied">
               <label class="radio-label" for="satisfied">Satisfied</label>
             </div>
-            <div class="subgroup">
+            <div class="big-subgroup">
               <input class="radio-btn" type="radio" name="check_in_rating" value="neutral" id="neutral">          
               <label class="radio-label" for="neutral">Neutral</label>
             </div>
-            <div class="subgroup">
+            <div class="big-subgroup">
               <input class="radio-btn" type="radio" name="check_in_rating" value="dissatisfied" id="dissatisfied"> 
               <label class="radio-label" for="dissatisfied">Dissatisfied</label>
             </div>
-            <div class="subgroup">
+            <div class="big-subgroup">
               <input class="radio-btn" type="radio" name="check_in_rating" value="very_dissatisfied" id="very_dissatisfied">
               <label class="radio-label" for="very_dissatisfied">Very Dissatisfied</label>
             </div>
           </div>
-            
-            
-            
-            
-
-      </fieldset>
-
-      <fieldset> 
         <legend class="question">Were you greeted warmly upon arrival?</legend>
         <div class="group">
           <div class="subgroup">
-            <input class="radio-btn"  type="radio" name="greeted" value="no" id="no">
-            <label class="radio-label"  for="no">No</label>
+            <input class="radio-btn"  type="radio" name="greeted" value="no" id="no_greet">
+            <label class="radio-label"  for="no_greet">No</label>
           </div>
           <div class="subgroup">
-            <input class="radio-btn"  type="radio" name="greeted" value="yes" id="yes">
-            <label class="radio-label" for="yes">Yes</label>
+            <input class="radio-btn"  type="radio" name="greeted" value="yes" id="yes_greet">
+            <label class="radio-label" for="yes_greet">Yes</label>
           </div>
-          
         </div>
       </fieldset>
 
       <fieldset> 
         <legend class="section">2. Room Accomodations:</legend>
         <legend class="question">How would you rate the cleanliness of your room?</legend>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
-      </fieldset>
-      
-      <fieldset> 
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="cleanliness_rating" value="excellent" id="excellent_clean">
+            <label class="radio-label" for="excellent_clean">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="cleanliness_rating" value="good" id="good_clean">
+            <label class="radio-label" for="good_clean">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="cleanliness_rating" value="fair" id="fair_clean">
+            <label class="radio-label" for="fair_clean">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="cleanliness_rating" value="poor" id="poor_clean">
+            <label class="radio-label" for="poor_clean">Poor</label>
+          </div>
+        </div>
+
         <legend class="question">Did you find your room comfortable?</legend>
         <div class="group">
-          <div class="subgroup"><input class="radio-btn"  type="radio" name="comfort_rating" value="no" id="no">
-            <label class="radio-label">No</label></div>
-          <div class="subgroup"><input class="radio-btn"  type="radio" name="comfort_rating" value="yes" id="yes">
-            <label class="radio-label" for="yes">Yes</label></div>
+          <div class="subgroup">
+            <input class="radio-btn"  type="radio" name="comfort_rating" value="no" id="no_comfort">
+            <label for='no_comfort' class="radio-label">No</label>
+          </div>
+          <div class="subgroup">
+            <input class="radio-btn"  type="radio" name="comfort_rating" value="yes" id="yes_comfort">
+            <label for='yes_comfort' class="radio-label" for="yes">Yes</label>
+          </div>
         </div>
         
       </fieldset>
       
       <fieldset>
         <legend class="section">3. Hotel Facilities:</legend>
-        <legend>Swimming Pool:</legend>
-        <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
+        <legend class="facilities">Swimming Pool:</legend>
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="excellent" id="na_sp">
+            <label  class="radio-label" for="na_sp">N/A</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="excellent" id="excellent_sp">
+            <label  class="radio-label" for="excellent_sp">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="good" id="good_sp">
+            <label  class="radio-label" for="good_sp">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="fair" id="fair_sp">
+            <label  class="radio-label" for="fair_sp">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="poor" id="poor_sp">
+            <label class="radio-label" for="poor_sp">Poor</label>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
-        <legend>Fitness Center: </legend>
-        <input class="radio-btn"  type="radio" name="fitness_center_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="fitness_center_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="fitness_center_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="fitness_center_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
+        <legend class="facilities">Fitness Center: </legend>
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="excellent" id="na_fc">
+            <label  class="radio-label" for="na_fc">N/A</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="fitness_center_rating" value="excellent" id="excellent_fc">
+            <label class="radio-label" for="excellent_fc">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="fitness_center_rating" value="good" id="good_fc">
+            <label  class="radio-label" for="good_fc">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="fitness_center_rating" value="fair"id="fair_fc">
+            <label  class="radio-label" for="fair_fc">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="fitness_center_rating" value="poor" id="poor_fc">
+            <label  class="radio-label" for="poor_fc">Poor</label>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
-        <legend>Restaurant:</legend>
-        <input class="radio-btn"  type="radio" name="restaurant_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="restaurant_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="restaurant_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="restaurant_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
+        <legend class="facilities">Restaurant:</legend>
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="excellent" id="na_r">
+            <label  class="radio-label" for="na_r">N/A</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="restaurant_rating" value="excellent" id="excellent_r">
+            <label class="radio-label" for="excellent_r">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="restaurant_rating" value="good" id="good_r">
+            <label  class="radio-label" for="good_r">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="restaurant_rating" value="fair" id="fair_r">
+            <label  class="radio-label" for="fair_r">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="restaurant_rating" value="poor"id="poor_r">
+            <label  class="radio-label" for="poor_r">Poor</label>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
-        <legend>Spa:</legend>
-        <input class="radio-btn"  type="radio" name="spa_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="spa_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="spa_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="spa_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
+        <legend class="facilities">Spa:</legend>
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="swimming_pool_rating" value="excellent" id="na_s">
+            <label  class="radio-label" for="na_s">N/A</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="spa_pool_rating" value="excellent" id="excellent_s" >
+            <label class="radio-label" for="excellent_s">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="spa_pool_rating" value="good" id="good_s" >
+            <label class="radio-label" for="good_s">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="spa_pool_rating" value="fair" id="fair_s" >
+            <label class="radio-label" for="fair_s">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="spa_pool_rating" value="poor" id="poor_s" >
+            <label class="radio-label" for="poor_s">Poor</label>
+          </div>
+        </div>
       </fieldset>
       
-      <fieldset> 
-        <legend class="question">How would you rate the cleanliness of your room?</legend>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="cleanliness_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
-      </fieldset>
       
       <fieldset> 
         <legend class="section">4. Dining Experience:</legend>
         <legend class="question">Did you dine at our restaurant during your stay?</legend>
         <div class="group">
-          <div class="subgroup"><input class="radio-btn"  type="radio" name="dined_in" value="no" id="no">
-            <label class="radio-label"  for="no">No</label></div>
-          <div class="subgroup"><input class="radio-btn"  type="radio" name="dined_in" value="yes" id="yes">
-            <label class="radio-label" for="yes">Yes</label></div>
+          <div class="subgroup"><input class="radio-btn"  type="radio" name="dined_in" value="no" id="no_dine">
+            <label class="radio-label"  for="no_dine">No</label></div>
+          <div class="subgroup"><input class="radio-btn"  type="radio" name="dined_in" value="yes" id="yes_dine">
+            <label class="radio-label" for="yes_dine">Yes</label></div>
         </div>
         
         
         <legend class="question">Please rate your dining experience:</legend>
-        <input class="radio-btn"  type="radio" name="dining_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="dining_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="dining_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="dining_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="dining_rating" value="excellent" id="excellent_dine">
+            <label class="radio-label" for="excellent_dine">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="dining_rating" value="good" id="good_dine">
+            <label class="radio-label" for="good_dine">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="dining_rating" value="fair" id="fair_dine">
+            <label class="radio-label" for="fair_dine">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="dining_rating" value="poor" id="poor_dine">
+            <label class="radio-label" for="poor_dine">Poor</label>
+          </div>
+        </div>
 
       </fieldset>
       <legend class="section">5. Overall Experience:</legend>
       <fieldset> 
-        <legend class="question">How would you rate your overall experience at [Hotel Name]?</legend>
-        <input class="radio-btn"  type="radio" name="overall_rating" value="excellent">
-        <label class="radio-label" for="excellent">Excellent</label>
-        <input class="radio-btn"  type="radio" name="overall_rating" value="good">
-        <label class="radio-label" for="good">Good</label>
-        <input class="radio-btn"  type="radio" name="overall_rating" value="fair">
-        <label class="radio-label" for="fair">Fair</label>
-        <input class="radio-btn"  type="radio" name="overall_rating" value="poor">
-        <label class="radio-label" for="poor">Poor</label>
+        <legend class="question">How would you rate your overall experience?</legend>
+        <div class="big-group">
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="overall_rating" value="excellent" id="excellent_overall">
+            <label class="radio-label" for="excellent_overall">Excellent</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="overall_rating" value="good" id="good_overall">
+            <label class="radio-label" for="good_overall">Good</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="overall_rating" value="fair" id="fair_overall">
+            <label class="radio-label" for="fair_overall">Fair</label>
+          </div>
+          <div class="big-subgroup">
+            <input class="radio-btn"  type="radio" name="overall_rating" value="poor"id="poor_overall">
+            <label class="radio-label" for="poor_overall">Poor</label>
+          </div>
+        </div>
       </fieldset>
       <fieldset>
         <legend class="section">6. Additional Comments:</legend>
@@ -212,10 +289,10 @@
         <textarea name="feedback" id="feedback" placeholder="Enter feedback here" rows="4" cols="30"></textarea>
       </fieldset>
       <fieldset>
-        
-        <label for="contact">May we contact you via email for any follow up communications?</label>
-        <label class="submit" for="submit">
-          <input type="submit" value="Submit your responses" id="submit" name="submit">
+        <label class="contact" for="contact">
+          <input type="checkbox" id="contact">May we contact you via email for any follow-up communications?</label>
+        <label class="submit-wrapper" for="submit">
+          <input class='submit' type="submit" value="Submit your responses" id="submit" name="submit">
         </label>
       </fieldset>
     </form>

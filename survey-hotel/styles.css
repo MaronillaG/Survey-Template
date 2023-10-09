@@ -1,5 +1,6 @@
 :root { 
     --background: #FFF0E5;
+    --background2: #efcdb5;
     --secondary-highlight: #5533FF;
     --secondary-main: #3A10E5;
     --white: whitesmoke;
@@ -29,16 +30,56 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--background);
+}
+form{
+    background-color: var(--background2);
+    border-radius: 3.5px;
+    box-shadow: 0 0 10px var(--background2);
+    margin: 0 5px 20px 5px;
 }
 
 @media screen and (min-width: 650px) {
     body {
         max-width: 800px;
     }
-    label {
-        font-size: 1rem;
+
+    .initial-section {
+        display: grid;
+        grid-template-rows: 5em 5em 5em;
+        grid-template-columns: 1fr;
+        grid-template-areas: "row1" "row2" "row3";
     }
+
+    .row1{
+        grid-area: row1;
+        display: flex;
+        align-items: flex-end;
+    }
+    .row2{
+        grid-area: row2;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    label.info{
+        flex-grow: 2;
+        margin-right: 12px;
+    }
+
+    #name, #email, #dropdown{
+        min-width: 250px;
+        max-width: 250px;
+        margin: 2px 10px 2px 0px;
+    }
+    
+    #age, #room-number{
+        margin: 2px 10px 2px 0px;
+        width: 50px;
+    }
+    .radio-label {
+        font-size: 0.8rem;
+    }
+
 }
 
 header {
@@ -62,7 +103,7 @@ fieldset {
 }
 
 .section {
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 0.8em;
     text-align: center;
     font-weight: 600;
@@ -83,10 +124,15 @@ input, input[type="number"], textarea, select {
     color: var(--font-dark);
 }
 
+input[type='text'], #email, input[type="number"], textarea, select {
+    box-shadow: 0 0 5px grey;
+
+}
+
 input, textarea {
     width: 100%;
     padding: 0 0.5em 0 0.5em;
-    border: none;
+    border: 2.5px;
     border-radius: 3.5px;
     outline: none;
 
@@ -104,13 +150,16 @@ input:focus {
 select {
     outline:none;
     width: 100%;
+    border: none;
+    margin-bottom: 2px;
+    border-radius: 3.5px;
 }
 
 select:focus {
     background-color: var(--white);
     border: 2.5px solid var(--secondary-main);
     border-radius: 3.5px;
-    width: 100%;
+    /* width: 100%; */
     
 }
 
@@ -189,6 +238,7 @@ select {
     padding-bottom: 0.3em;
     margin-top: 25px;
     max-width: 300px;
+    box-shadow: 0 0 10px grey;
 }
 
 input[type="submit"]:hover {
@@ -213,4 +263,6 @@ input[type="checkbox"] {
     height: 15px;
     width: 15px;
     margin: 0 2em 0 2em ;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
 }
