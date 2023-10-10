@@ -10,4 +10,4 @@ Features:
 - used eye-catching color highlights when the mouse hovers over radio buttons.
   
 
-[screen_recording_survey.webm](https://github.com/MaronillaG/Templates/assets/105639251/555d1c40-830a-46fc-b776-53f4a4c6df89)
+[screen-capture-survey.webm](https://github.com/MaronillaG/Templates/assets/105639251/f7d703c5-c6f5-4301-9be0-49b78d0c1ca0)
